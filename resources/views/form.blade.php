@@ -29,9 +29,9 @@
                     <img src="img/logo.png" alt="" style="width: 300px; height: auto;">
                 </div>
                 <div class="px-6 py-4 sm:block" style="top: 30px; right: 114px;">
-                    <a href="{{ url('/') }}" class="text-sm {{ Route::currentRouteName() === 'home' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">HOME</a>
-                    <a href="{{ route('form') }}" class="ml-4 text-sm {{ Route::currentRouteName() === 'form' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">FORM</a>
-                    <a href="{{ route('data') }}" class="ml-4 text-sm {{ Route::currentRouteName() === 'data' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">DATA</a>
+                    <a href="{{ url('/') }}" class="text-sm {{ Route::currentRouteName() === 'home' ? 'text-gray-700 dark:text-gray-300' : 'text-gray-500 dark:text-gray-500' }}" style="font-weight: bold;">HOME</a>
+                    <a href="{{ route('form') }}" class="ml-4 text-sm {{ Route::currentRouteName() === 'form' ? 'text-gray-700 dark:text-gray-300' : 'text-gray-500 dark:text-gray-500' }}" style="font-weight: bold;">FORM</a>
+                    <a href="{{ route('data') }}" class="ml-4 text-sm {{ Route::currentRouteName() === 'data' ? 'text-gray-700 dark:text-gray-300' : 'text-gray-500 dark:text-gray-500' }}" style="font-weight: bold;">DATA</a>
                 </div>
             </div>
 
@@ -39,12 +39,12 @@
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1">
                         <div class="p-12">
-                            <h2 class="text-gray-400 dark:text-gray-800">AAFIYAT RECRUITMENT TEST</h2>
-                            <p class="text-gray-400 dark:text-gray-800">This project is developed using Laravel v.8 framework on PHP v.8.1 using MySQL database as per the requirement of <a href="https://bitbucket.org/aafiyat2u/assessment_laravel/src/master/README.md" class="!text-grey-200">AAFIYAT Laravel Assessment. To get started, please follow the steps below: </a></p>
-                            <p class="ml-4 text-gray-400 dark:text-gray-800">1. Create a MySQL database on your machine to run the system.</p>
-                            <p class="ml-4 text-gray-400 dark:text-gray-800">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside your system's root directory. </p>
-                            <p class="ml-4 text-gray-400 dark:text-gray-800">3. Run the command line "php artisan migrate" OR manually update your database using queries on SQL file which can be found inside "your system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
-                            <p class="text-gray-600 dark:text-gray-700 mt-8"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">
+                            <h2 class="text-gray-600 dark:text-gray-800">AAFIYAT RECRUITMENT TEST</h2>
+                            <p class="text-gray-600 dark:text-gray-800">This project is developed using Laravel v.8 framework on PHP v.8.1 and MySQL database as per the requirement of <a href="https://bitbucket.org/aafiyat2u/assessment_laravel/src/master/README.md" class="!text-grey-200">AAFIYAT Laravel Assessment. To get started, please follow the steps below: </a></p>
+                            <p class="ml-4 text-gray-600 dark:text-gray-800">1. Create a MySQL database on your machine to run the system.</p>
+                            <p class="ml-4 text-gray-600 dark:text-gray-800">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside your system's root directory. </p>
+                            <p class="ml-4 text-gray-600 dark:text-gray-800">3. Run the command line "php artisan migrate" OR manually update your database using queries on SQL file which can be found inside "your system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
+                            <p class="text-gray-400 dark:text-gray-700 mt-8"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">
                                 Developed By Khairil Azri Azlan (920105-02-6015)
                             </a>
                         </div>
