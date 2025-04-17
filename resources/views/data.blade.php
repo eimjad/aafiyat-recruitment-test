@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Aafiyat Test Project</title>
+        <title>Data Page</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block" style="top: 30px; right: 114px;">
-                <a href="{{ url('/') }}" class="text-sm {{ Route::currentRouteName() === 'home' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">HOME</a>
+            <a href="{{ url('/') }}" class="text-sm {{ Route::currentRouteName() === 'home' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">HOME</a>
                 <a href="{{ route('form') }}" class="ml-4 text-sm {{ Route::currentRouteName() === 'form' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">FORM</a>
                 <a href="{{ route('data') }}" class="ml-4 text-sm {{ Route::currentRouteName() === 'data' ? 'text-gray-500 dark:text-gray-300' : 'text-gray-700 dark:text-gray-500' }}" style="font-weight: bold;">DATA</a>
             </div>
