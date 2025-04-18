@@ -38,9 +38,9 @@
                         <div class="p-12">
                             <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">AAFIYAT RECRUITMENT TEST</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-2">This system is developed using Laravel v.8 framework on PHP v.8.1 and MySQL database as per the requirement of <a href="https://bitbucket.org/aafiyat2u/assessment_laravel/src/master/README.md" class="!text-grey-200">AAFIYAT Laravel Assessment. To get started, please follow the steps below: </a></p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">1. Create a MySQL database on your machine to run the system.</p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside the system's root directory. </p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">3. Run the command line "php artisan migrate:fresh --seed" OR manually update your database using queries. The SQL queries resides in an SQL file which can be found inside "the system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
+                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2 text-sm">1. Create a MySQL database on your machine to run the system.</p>
+                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2 text-sm">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside the system's root directory. </p>
+                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2 text-sm">3. Run the command line "php artisan migrate:fresh --seed" OR manually update your database using queries. The SQL queries resides in an SQL file which can be found inside "the system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
                             <p class="text-gray-500 dark:text-gray-500 mt-8"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">Developed By Khairil Azri Azlan (920105-02-6015)</a></p>
                         </div>
                     </div>

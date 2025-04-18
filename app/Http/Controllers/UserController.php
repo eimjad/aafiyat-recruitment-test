@@ -46,16 +46,18 @@ class UserController extends Controller
         }
 
         $data = $request->only(['name', 'email', 'gender', 'birthday']);
+        $data['status'] = $request->has('status') ? 1 : 0;
+
         if ($request->filled('password')) {
-        $data['password'] = bcrypt($request->password);
+            $data['password'] = bcrypt($request->password);
         }
 
         if ($request->id) {
-        $user = User::findOrFail($request->id);
-        $user->update($data);
+            $user = User::findOrFail($request->id);
+            $user->update($data);
         } else {
-        $data['created_at'] = now();
-        User::create($data);
+            $data['created_at'] = now();
+            User::create($data);
         }
 
         return redirect()->route('data')->with('success', 'User data saved successfully.');

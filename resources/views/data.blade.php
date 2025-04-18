@@ -33,6 +33,20 @@
                 </div>
             </div>
 
+            @if (session('success'))
+            <div id="alert-message" class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <div class="mb-4 p-4 bg-green-100 text-green-700 border border-green-300 rounded">
+                    <i class="fa fa-check-circle mr-2"></i> {{ session('success') }}
+                </div>
+            </div>
+            @elseif (session('error'))
+            <div id="alert-message" class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <div class="mb-4 p-4 bg-red-100 text-red-700 border border-red-300 rounded">
+                    <i class="fa fa-times-circle mr-2"></i> {{ session('error') }}
+                </div>
+            </div>
+            @endif
+
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1">
@@ -67,13 +81,14 @@
                                             <td class="p-3"><?= date('d M Y, h:i A', strtotime($user->created_at)) ?></td>
                                             <td class="p-3 flex gap-2">
                                                 <a href="/user/<?= $user->id ?>" class="bg-sky-500 text-white px-3 py-1 rounded hover:bg-sky-600 text-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                <form method="post" action="/users/delete/<?= $user->id ?>" onsubmit="return confirm('Are you sure you want to delete this user?')" class="inline">
+                                                <form method="post" action="/user/delete/<?= $user->id ?>" onsubmit="return confirm('Are you sure you want to delete this user?')" class="inline">
+                                                    @csrf
                                                     <input type="hidden" name="soft_delete" value="1">
                                                     <button type="submit" class="bg-blue-700 text-white px-3 py-1 rounded hover:bg-blue-800 hover:cursor-pointer text-sm" title="Delete User"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                                 </form>
                                             </td>
                                             </tr>
-                                    <?php endforeach; ?>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -92,5 +107,19 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            // auto close message box
+            document.addEventListener('DOMContentLoaded', function () {
+                const alertBox = document.getElementById('alert-message');
+                if (alertBox) {
+                setTimeout(() => {
+                    alertBox.style.transition = 'opacity 0.5s ease';
+                    alertBox.style.opacity = 0;
+                    setTimeout(() => alertBox.remove(), 500);
+                }, 4000); // Auto close after 4 seconds
+                }
+            });
+        </script>
     </body>
 </html>
