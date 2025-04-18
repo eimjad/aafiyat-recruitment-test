@@ -36,14 +36,54 @@
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1">
                         <div class="p-12">
-                            <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">AAFIYAT RECRUITMENT TEST</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-2">This system is developed using Laravel v.8 framework on PHP v.8.1 and MySQL database as per the requirement of <a href="https://bitbucket.org/aafiyat2u/assessment_laravel/src/master/README.md" class="!text-grey-200">AAFIYAT Laravel Assessment. To get started, please follow the steps below: </a></p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">1. Create a MySQL database on your machine to run the system.</p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside the system's root directory. </p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">3. Run the command line "php artisan migrate" OR manually update your database using queries. The SQL queries resides in an SQL file which can be found inside "the system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
-                            <p class="text-gray-500 dark:text-gray-500 mt-12"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">
-                                Developed By Khairil Azri Azlan (920105-02-6015)
-                            </a>
+                            <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">USER FORM PAGE</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-8">
+                            This page is used to collect user data. Please fill in the form below and click on the SAVE button to record the data.
+                            </p>
+
+                            <form method="post" action="/your-form-handler">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-500 dark:text-gray-500 mb-2">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-500 dark:text-gray-500 mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="password" class="block text-gray-500 dark:text-gray-500 mb-2">Password</label>
+                                    <input type="password" id="password" name="password" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="gender" class="block text-gray-500 dark:text-gray-500 mb-2">Gender</label>
+                                    <select id="gender" name="gender" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                    <option value="">-- Select Gender --</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="birthday" class="block text-gray-500 dark:text-gray-500 mb-2">Birthday</label>
+                                    <input type="date" id="birthday" name="birthday" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <span class="ml-2 text-gray-600 dark:text-gray-400 mr-2">Active</span>
+                                        <input type="checkbox" name="status" class="form-checkbox">
+                                    </label>
+                                </div>
+
+                                <div class="mt-8 text-right">
+                                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                    SAVE
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

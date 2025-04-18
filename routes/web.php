@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 })->name('home');
 
-Route::get('form', function () {
-    return view('form');
-})->name('form');
+Route::get('form', [UserController::class, 'create'])->name('form');
+Route::get('form/{id}', [UserController::class, 'edit'])->name('form.edit');
+Route::post('form/submit', [UserController::class, 'submit'])->name('form.submit');
+Route::post('form/delete', [UserController::class, 'delete'])->name('form.delete');
 
-Route::get('data', function () {
-    return view('data');
-})->name('data');
+Route::get('data', [UserController::class, 'index'])->name('data');
+
