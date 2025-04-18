@@ -41,7 +41,7 @@
                             <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">1. Create a MySQL database on your machine to run the system.</p>
                             <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside the system's root directory. </p>
                             <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">3. Run the command line "php artisan migrate:fresh --seed" OR manually update your database using queries. The SQL queries resides in an SQL file which can be found inside "the system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
-                            <p class="text-gray-500 dark:text-gray-500 mt-12"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">Developed By Khairil Azri Azlan (920105-02-6015)</a></p>
+                            <p class="text-gray-500 dark:text-gray-500 mt-8"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">Developed By Khairil Azri Azlan (920105-02-6015)</a></p>
                         </div>
                     </div>
                 </div>

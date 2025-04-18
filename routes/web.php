@@ -14,14 +14,12 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-  return view('welcome');
-})->name('home');
-
+// view routes
+Route::get('/', [UserController::class, 'welcome'])->name('home');
 Route::get('form', [UserController::class, 'create'])->name('form');
-Route::get('form/{id}', [UserController::class, 'edit'])->name('form.edit');
-Route::post('form/submit', [UserController::class, 'submit'])->name('form.submit');
-Route::post('form/delete', [UserController::class, 'delete'])->name('form.delete');
-
 Route::get('data', [UserController::class, 'index'])->name('data');
 
+// process routes
+Route::get('user/{id}', [UserController::class, 'edit'])->name('user.edit');
+Route::post('user/submit', [UserController::class, 'submit'])->name('user.submit');
+Route::post('user/delete/{id}', [UserController::class, 'delete'])->name('user.delete');

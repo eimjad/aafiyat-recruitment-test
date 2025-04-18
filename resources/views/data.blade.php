@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('vendors/font-awesome-4.7.0/css/font-awesome.min.css') }}">
 
         <!-- Styles -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -38,7 +39,7 @@
                         <div class="p-12">
                             <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">USER DATA PAGE</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-6">
-                            This page is used to display user data. The table below summarizes the user data. Click on the button provided to DELETE or UPDATE the data.
+                            This page is used to display user data. The table below summarizes the data. Click on the button provided to DELETE or UPDATE the data.
                             </p>
 
                             <div class="overflow-x-auto">
@@ -57,18 +58,18 @@
                                     <tbody>
                                         <!-- display all data -->
                                         <?php foreach ($users as $user): ?>
-                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
-                                            <td class="p-3 border-b"><?= $user->id ?></td>
-                                            <td class="p-3 border-b"><?= htmlspecialchars($user->name) ?></td>
-                                            <td class="p-3 border-b"><?= htmlspecialchars($user->email) ?></td>
-                                            <td class="p-3 border-b"><?= $user->gender ?></td>
-                                            <td class="p-3 border-b"><?= date('d/m/Y', strtotime($user->birthday)) ?></td>
-                                            <td class="p-3 border-b"><?= date('d M Y, h:i A', strtotime($user->created_at)) ?></td>
-                                            <td class="p-3 border-b flex gap-2">
-                                                <a href="/form/<?= $user->id ?>" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 text-sm">Update</a>
+                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 border-b border-gray-400 dark:border-gray-600 text-sm">
+                                            <td class="p-3"><?= $user->id ?></td>
+                                            <td class="p-3"><?= htmlspecialchars($user->name) ?></td>
+                                            <td class="p-3"><?= htmlspecialchars($user->email) ?></td>
+                                            <td class="p-3"><?= $user->gender ?></td>
+                                            <td class="p-3"><?= date('d/m/Y', strtotime($user->birthday)) ?></td>
+                                            <td class="p-3"><?= date('d M Y, h:i A', strtotime($user->created_at)) ?></td>
+                                            <td class="p-3 flex gap-2">
+                                                <a href="/user/<?= $user->id ?>" class="bg-sky-500 text-white px-3 py-1 rounded hover:bg-sky-600 text-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                                 <form method="post" action="/users/delete/<?= $user->id ?>" onsubmit="return confirm('Are you sure you want to delete this user?')" class="inline">
-                                                <input type="hidden" name="soft_delete" value="1">
-                                                <button type="submit" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 text-sm">Delete</button>
+                                                    <input type="hidden" name="soft_delete" value="1">
+                                                    <button type="submit" class="bg-blue-700 text-white px-3 py-1 rounded hover:bg-blue-800 hover:cursor-pointer text-sm" title="Delete User"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                                 </form>
                                             </td>
                                             </tr>

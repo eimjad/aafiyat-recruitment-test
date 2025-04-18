@@ -38,7 +38,7 @@
                         <div class="p-12">
                             <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">USER FORM PAGE</h2>
                             <p class="text-gray-600 dark:text-gray-400 mb-8">
-                            This page is used to collect user data. Please fill in the form below and click on the SAVE button to record the data.
+                            This page is used to store and update user data. Please fill in the form below and click on the SAVE button to record the data.
                             </p>
 
                             <form method="post" action="/your-form-handler">
@@ -72,13 +72,13 @@
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="inline-flex items-center">
-                                        <span class="ml-2 text-gray-600 dark:text-gray-400 mr-2">Active</span>
-                                        <input type="checkbox" name="status" class="form-checkbox">
+                                    <label class="inline-flex items-center hover:cursor-pointer">
+                                        <span class="text-gray-600 dark:text-gray-400 mr-2">Active</span>
+                                        <input type="checkbox" name="status" class="form-checkbox hover:cursor-pointer">
                                     </label>
                                 </div>
 
-                                <div class="mt-8 text-right">
+                                <div class="text-right">
                                     <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-600">
                                     SAVE
                                     </button>
