@@ -36,14 +36,46 @@
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1">
                         <div class="p-12">
-                            <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">AAFIYAT RECRUITMENT TEST</h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-2">This system is developed using Laravel v.8 framework on PHP v.8.1 and MySQL database as per the requirement of <a href="https://bitbucket.org/aafiyat2u/assessment_laravel/src/master/README.md" class="!text-grey-200">AAFIYAT Laravel Assessment. To get started, please follow the steps below: </a></p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">1. Create a MySQL database on your machine to run the system.</p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">2. Update "DB_DATABASE" value on .env file to match the database name you created earlier AND make sure other DB connection details are correct. The .env file can be found inside the system's root directory. </p>
-                            <p class="ml-4 text-gray-600 dark:text-gray-400 mb-2">3. Run the command line "php artisan migrate" OR manually update your database using queries. The SQL queries resides in an SQL file which can be found inside "the system's root directory / public / sql / aafiyat-recruitment-test.sql".</p>
-                            <p class="text-gray-500 dark:text-gray-500 mt-12"><a href="https://www.linkedin.com/in/azriazlan19/" class="" title=" LinkedIn Profile" target="_blank">
-                                Developed By Khairil Azri Azlan (920105-02-6015)
-                            </a>
+                            <h2 class="text-gray-600 dark:text-gray-400 text-2xl font-bold mb-4">USER DATA PAGE</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            This page is used to display user data. The table below summarizes the user data. Click on the button provided to DELETE or UPDATE the data.
+                            </p>
+
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow">
+                                    <thead>
+                                    <tr class="bg-gray-200 dark:bg-gray-700 text-left text-gray-700 dark:text-gray-300">
+                                        <th class="p-3 border-b">ID</th>
+                                        <th class="p-3 border-b">Name</th>
+                                        <th class="p-3 border-b">Email</th>
+                                        <th class="p-3 border-b">Gender</th>
+                                        <th class="p-3 border-b">Birthday</th>
+                                        <th class="p-3 border-b">Created At</th>
+                                        <th class="p-3 border-b">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- display all data -->
+                                        <?php foreach ($users as $user): ?>
+                                            <tr class="hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200">
+                                            <td class="p-3 border-b"><?= $user->id ?></td>
+                                            <td class="p-3 border-b"><?= htmlspecialchars($user->name) ?></td>
+                                            <td class="p-3 border-b"><?= htmlspecialchars($user->email) ?></td>
+                                            <td class="p-3 border-b"><?= $user->gender ?></td>
+                                            <td class="p-3 border-b"><?= date('d/m/Y', strtotime($user->birthday)) ?></td>
+                                            <td class="p-3 border-b"><?= date('d M Y, h:i A', strtotime($user->created_at)) ?></td>
+                                            <td class="p-3 border-b flex gap-2">
+                                                <a href="/form/<?= $user->id ?>" class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 text-sm">Update</a>
+                                                <form method="post" action="/users/delete/<?= $user->id ?>" onsubmit="return confirm('Are you sure you want to delete this user?')" class="inline">
+                                                <input type="hidden" name="soft_delete" value="1">
+                                                <button type="submit" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 text-sm">Delete</button>
+                                                </form>
+                                            </td>
+                                            </tr>
+                                    <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
