@@ -44,22 +44,22 @@
                             <form method="post" action="/your-form-handler">
                                 <div class="mb-4">
                                     <label for="name" class="block text-gray-500 dark:text-gray-500 mb-2">Name</label>
-                                    <input type="text" id="name" name="name" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                    <input type="text" id="name" name="name" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded focus:border-gray-600 focus:dark:border-gray-400 outline-0" required>
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="email" class="block text-gray-500 dark:text-gray-500 mb-2">Email</label>
-                                    <input type="email" id="email" name="email" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                    <input type="email" id="email" name="email" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded focus:border-gray-600 focus:dark:border-gray-400 outline-0" required>
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="password" class="block text-gray-500 dark:text-gray-500 mb-2">Password</label>
-                                    <input type="password" id="password" name="password" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                    <input type="password" id="password" name="password" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded focus:border-gray-600 focus:dark:border-gray-400 outline-0" required>
                                 </div>
 
                                 <div class="mb-4">
                                     <label for="gender" class="block text-gray-500 dark:text-gray-500 mb-2">Gender</label>
-                                    <select id="gender" name="gender" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                    <select id="gender" name="gender" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded focus:border-gray-600 focus:dark:border-gray-400 outline-0" required>
                                     <option value="">-- Select Gender --</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -68,7 +68,7 @@
 
                                 <div class="mb-4">
                                     <label for="birthday" class="block text-gray-500 dark:text-gray-500 mb-2">Birthday</label>
-                                    <input type="date" id="birthday" name="birthday" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded" required>
+                                    <input type="date" id="birthday" name="birthday" class="w-full p-2 text-gray-600 dark:text-gray-400 border border-gray-400 dark:border-gray-600 rounded focus:border-gray-600 focus:dark:border-gray-400 outline-0" required>
                                 </div>
 
                                 <div class="mb-4">

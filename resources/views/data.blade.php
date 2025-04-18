@@ -46,13 +46,13 @@
                                 <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow">
                                     <thead>
                                     <tr class="bg-gray-200 dark:bg-gray-700 text-left text-gray-700 dark:text-gray-300">
-                                        <th class="p-3 border-b">ID</th>
-                                        <th class="p-3 border-b">Name</th>
-                                        <th class="p-3 border-b">Email</th>
-                                        <th class="p-3 border-b">Gender</th>
-                                        <th class="p-3 border-b">Birthday</th>
-                                        <th class="p-3 border-b">Created At</th>
-                                        <th class="p-3 border-b">Actions</th>
+                                        <th class="p-3 border-b text-sm">ID</th>
+                                        <th class="p-3 border-b text-sm">Name</th>
+                                        <th class="p-3 border-b text-sm">Email</th>
+                                        <th class="p-3 border-b text-sm">Gender</th>
+                                        <th class="p-3 border-b text-sm">Birthday</th>
+                                        <th class="p-3 border-b text-sm">Created At</th>
+                                        <th class="p-3 border-b text-sm">Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
